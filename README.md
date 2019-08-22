@@ -1,11 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Railsの教科書](http://igarashikuniaki.net/rails_textbook/)で作成した`books_app`のリポジトリです。
 
-Things you may want to cover:
+
+### 開発環境など
 
 * Ruby version
+    * ruby 2.6.2p47 (2019-03-13 revision 67232) [x86_64-darwin18] 
+
+* Rails version
+    * Rails 5.2.3
 
 * System dependencies
 
