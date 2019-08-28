@@ -1,12 +1,34 @@
 en:
-  view:
-    books: "Books"
-    title: "Title"
-    memo: "Memo"
-    author: "Author"
-    picture: "Picture"
-    show: "Show"
-    edit: "Edit"
-    destroy: "Destroy"
-    new_book: "New Book"
-    back: "Back"
+  activerecord:
+    attributes:
+      book:
+        title: Title
+        memo: Memo
+        author: Author
+        picture: Picture
+  helpers:
+    select:
+      prompt: Please select
+    submit:
+      create: Create %{model}
+      submit: Save %{model}
+      update: Update %{model}
+  books:
+    title: Title
+    memo: Memo
+    author: Author
+    picture: Picture
+  views:
+    books: Books
+    editing_book: Editing Book
+    new_book: New Book
+    show: Show
+    edit: Edit
+    destroy: Destroy
+    back: Back
+  messages:
+    successfully_created: Book was successfully created.
+    successfully_updated: Book was successfully updated.
+    successfully_destroyed: Book was successfully destroyed.
+    prohibited_saved: prohibited this book from being saved
+    confirm: Are you sure?
