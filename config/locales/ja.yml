@@ -26,7 +26,7 @@ ja:
           one: "<b>1</b> 件の %{entry_name} を表示"
           other: "<b>全 %{count}</b> 件の %{entry_name} を表示"
       more_pages:
-        display_entries: "全 <b>%{total}</b> 件中 <b>%{first}&nbsp;-&nbsp;%{last}</b> の %{entry_name} を表示"
+        display_entries: "全 <b>%{total}</b> 件中 <b>%{first}&nbsp;-&nbsp;%{last}</b> 件の %{entry_name} を表示"
   books:
     title: タイトル
     memo: メモ
