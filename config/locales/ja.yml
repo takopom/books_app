@@ -1,0 +1,34 @@
+ja:
+  activerecord:
+    attributes:
+      book:
+        title: タイトル
+        memo: メモ
+        author: 著者
+        picture: 画像
+  helpers:
+    select:
+      prompt: 選択してください
+    submit:
+      create: 作成する
+      submit: 保存する
+      update: 更新する
+  books:
+    title: タイトル
+    memo: メモ
+    author: 著者
+    picture: 画像
+  views:
+    books: 本リスト
+    new_book: 新しい本を登録
+    editing_book: 本を編集
+    show: 閲覧
+    edit: 編集
+    destroy: 削除
+    back: 戻る
+  messages:
+    successfully_created: 本を登録しました。
+    successfully_updated: 本を更新しました。
+    successfully_destroyed: 本を削除しました。
+    prohibited_saved: 本の保存ができませんでした。
+    confirm: 本当によろしいですか？
