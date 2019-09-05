@@ -2,12 +2,17 @@ ja:
   activerecord:
     models:
       book: 本
+      user: ユーザ
     attributes:
       book:
         title: タイトル
         memo: メモ
         author: 著者
         picture: 画像
+      user:
+        zipcode: 郵便番号
+        address: 住所
+        bio: 自己紹介
   helpers:
     select:
       prompt: 選択してください
