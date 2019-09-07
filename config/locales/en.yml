@@ -44,6 +44,12 @@ en:
       previous: "&lsaquo; Prev"
       next: "Next &rsaquo;"
       truncate: "&hellip;"
+    user:
+      sign_up: Sign up
+      log_in: Log in
+      logged_in: "Logged in as %{email}"
+      logout: Log out
+      edit_profile: Edit profile
   messages:
     successfully_created: Book was successfully created.
     successfully_updated: Book was successfully updated.

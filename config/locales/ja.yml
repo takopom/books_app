@@ -51,6 +51,12 @@ ja:
       previous: "&lsaquo; 前"
       next: "次 &rsaquo;"
       truncate: "&hellip;"
+    user:
+      sign_up: サインイン
+      log_in: ログイン
+      logged_in: "%{email} でログイン中"
+      logout: ログアウト
+      edit_profile: プロフィール編集
   messages:
     successfully_created: 本を登録しました。
     successfully_updated: 本を更新しました。
