@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   end
 
   get "/:locale" => "books#index"
+  get "/:locale/books" => "books#index", as: :user_root
 end
