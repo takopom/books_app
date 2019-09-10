@@ -1,0 +1,23 @@
+<p>
+  <strong><%= t("users.email") %></strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong><%= t("users.zipcode") %></strong>
+  <%= @user.zipcode %>
+</p>
+
+<p>
+  <strong><%= t("users.address") %></strong>
+  <%= @user.address %>
+</p>
+
+
+<p>
+  <strong><%= t("users.bio") %></strong>
+  <%= @user.bio %>
+</p>
+
+<%= link_to t("views.edit"), edit_user_registration_path %> |
+<%= link_to t("views.back"), books_path %>
