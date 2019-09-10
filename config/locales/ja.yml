@@ -37,6 +37,11 @@ ja:
     memo: メモ
     author: 著者
     picture: 画像
+  users:
+    email: メールアドレス
+    zipcode: 郵便番号
+    address: 住所
+    bio: 自己紹介
   views:
     books: 本リスト
     new_book: 新しい本を登録
@@ -57,6 +62,7 @@ ja:
       logged_in: "%{email} でログイン中"
       logout: ログアウト
       edit_profile: プロフィール編集
+      show_profile: プロフィール表示
   messages:
     successfully_created: 本を登録しました。
     successfully_updated: 本を更新しました。

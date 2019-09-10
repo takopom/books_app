@@ -30,6 +30,11 @@ en:
     memo: Memo
     author: Author
     picture: Picture
+  users:
+    email: E-mail address
+    zipcode: Zip code
+    address: Address
+    bio: Bio
   views:
     books: Books
     editing_book: Editing Book
@@ -50,6 +55,7 @@ en:
       logged_in: "Logged in as %{email}"
       logout: Log out
       edit_profile: Edit profile
+      show_profile: Show profile
   messages:
     successfully_created: Book was successfully created.
     successfully_updated: Book was successfully updated.
