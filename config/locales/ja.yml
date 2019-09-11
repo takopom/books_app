@@ -2,12 +2,17 @@ ja:
   activerecord:
     models:
       book: 本
+      user: ユーザ
     attributes:
       book:
         title: タイトル
         memo: メモ
         author: 著者
         picture: 画像
+      user:
+        zipcode: 郵便番号
+        address: 住所
+        bio: 自己紹介
   helpers:
     select:
       prompt: 選択してください
@@ -32,6 +37,11 @@ ja:
     memo: メモ
     author: 著者
     picture: 画像
+  users:
+    email: メールアドレス
+    zipcode: 郵便番号
+    address: 住所
+    bio: 自己紹介
   views:
     books: 本リスト
     new_book: 新しい本を登録
@@ -46,6 +56,13 @@ ja:
       previous: "&lsaquo; 前"
       next: "次 &rsaquo;"
       truncate: "&hellip;"
+    user:
+      sign_up: サインイン
+      log_in: ログイン
+      logged_in: "%{email} でログイン中"
+      logout: ログアウト
+      edit_profile: プロフィール編集
+      show_profile: プロフィール表示
   messages:
     successfully_created: 本を登録しました。
     successfully_updated: 本を更新しました。
