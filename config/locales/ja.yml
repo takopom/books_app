@@ -13,6 +13,7 @@ ja:
         zipcode: 郵便番号
         address: 住所
         bio: 自己紹介
+        avatar: アイコン画像
   helpers:
     select:
       prompt: 選択してください
@@ -42,6 +43,7 @@ ja:
     zipcode: 郵便番号
     address: 住所
     bio: 自己紹介
+    avatar: アイコン画像
   views:
     books: 本リスト
     new_book: 新しい本を登録
