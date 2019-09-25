@@ -19,5 +19,12 @@
   <%= @user.bio %>
 </p>
 
+<p>
+  <strong><%= t("users.avatar") %></strong>
+  <br>
+  <% avatar = @user.avatar.attached? ? @user.avatar : "/assets/default.png" %>
+  <%= image_tag avatar, size: "100x100" %>
+  </p>
+
 <%= link_to t("views.edit"), edit_user_registration_path %> |
 <%= link_to t("views.back"), books_path %>
