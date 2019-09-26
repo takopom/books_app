@@ -1,0 +1,6 @@
+<%= form_with(model: @user, local: true) do |form| %>
+  <%= f.hidden_field_tag: :followed_id, @user.id %>
+  <div class="actions">
+    <%= form.submit "Unfollow" %>
+  </div>
+<% end %>
