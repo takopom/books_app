@@ -22,7 +22,7 @@
 <p>
   <strong><%= t("users.avatar") %></strong>
   <br>
-  <% avatar = @user.avatar.attached? ? @user.avatar : "/assets/default.png" %>
+  <% avatar = @user.avatar.attached? ? @user.avatar : "default.png" %>
   <%= image_tag avatar, size: "100x100" %>
   </p>
 
