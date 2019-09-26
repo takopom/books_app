@@ -55,6 +55,7 @@ en:
       log_in: Log in
       logged_in: "Logged in as %{email}"
       logout: Log out
+      sign_in_with_github: Sign in with GitHub
       edit_profile: Edit profile
       show_profile: Show profile
   messages:
