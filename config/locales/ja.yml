@@ -61,6 +61,7 @@ ja:
       log_in: ログイン
       logged_in: "%{email} でログイン中"
       logout: ログアウト
+      sign_in_with_github: GitHubでサインイン
       edit_profile: プロフィール編集
       show_profile: プロフィール表示
   messages:
