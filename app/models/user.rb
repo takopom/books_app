@@ -8,4 +8,16 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  def follow(other)
+    active_relationships.create(followed_id: other.id)
+  end
+
+  def following?(other)
+    following.include?(other)
+  end
+
+  def unfollow(other)
+    active_relationships.find_by(followed_id: other.id).destroy
+  end
 end

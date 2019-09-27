@@ -58,6 +58,8 @@ en:
       logout: Log out
       edit_profile: Edit profile
       show_profile: Show profile
+    follow: Follow
+    unfollow: Unfollow
   messages:
     successfully_created: Book was successfully created.
     successfully_updated: Book was successfully updated.
