@@ -18,5 +18,10 @@
   <%= image_tag(@book.picture_url) if @book.picture.present? %>
 </p>
 
+<p>
+  <strong><%= t("books.user_id") %>:</strong>
+  <%= link_to @user.email, user_path(@user) %>
+</p>
+
 <%= link_to t("views.edit"), edit_book_path(@book) %> |
 <%= link_to t("views.back"), books_path %>

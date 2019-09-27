@@ -6,6 +6,7 @@ en:
         memo: Memo
         author: Author
         picture: Picture
+        user_id: Posted by
   helpers:
     select:
       prompt: Please select
@@ -30,6 +31,7 @@ en:
     memo: Memo
     author: Author
     picture: Picture
+    user_id: Posted by
   users:
     email: E-mail address
     zipcode: Zip code

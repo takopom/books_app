@@ -9,6 +9,7 @@ ja:
         memo: メモ
         author: 著者
         picture: 画像
+        user_id: 投稿者
       user:
         zipcode: 郵便番号
         address: 住所
@@ -37,6 +38,7 @@ ja:
     memo: メモ
     author: 著者
     picture: 画像
+    user_id: 投稿者
   users:
     email: メールアドレス
     zipcode: 郵便番号
