@@ -60,6 +60,8 @@ en:
       show_profile: Show profile
     follow: Follow
     unfollow: Unfollow
+    show_posts: Show posts from this user
+    posts_title: "Posts by %{email}"
   messages:
     successfully_created: Book was successfully created.
     successfully_updated: Book was successfully updated.

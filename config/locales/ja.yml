@@ -67,6 +67,8 @@ ja:
       show_profile: プロフィール表示
     follow: フォローする
     unfollow: フォロー解除
+    show_posts: このユーザの投稿を見る
+    posts_title: "%{email}さんの投稿一覧"
   messages:
     successfully_created: 本を登録しました。
     successfully_updated: 本を更新しました。
