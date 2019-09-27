@@ -19,9 +19,13 @@
   <%= @user.bio %>
 </p>
 
+<%= render "follow_form" %>
+
 <p>
-  <%= render "follow_form" %>
+  <%= link_to "このユーザの投稿を見る", user_posts_path %>
 </p>
+
+<br>
 
 <%= link_to t("views.edit"), edit_user_registration_path %> |
 <%= link_to t("views.back"), books_path %>
