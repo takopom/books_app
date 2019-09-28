@@ -37,6 +37,7 @@ en:
     zipcode: Zip code
     address: Address
     bio: Bio
+    avatar: Avatar
   views:
     books: Books
     editing_book: Editing Book
@@ -56,6 +57,7 @@ en:
       log_in: Log in
       logged_in: "Logged in as %{email}"
       logout: Log out
+      sign_in_with_github: Sign in with GitHub
       edit_profile: Edit profile
       show_profile: Show profile
     follow: Follow

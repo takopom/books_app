@@ -14,6 +14,7 @@ ja:
         zipcode: 郵便番号
         address: 住所
         bio: 自己紹介
+        avatar: アイコン画像
   helpers:
     select:
       prompt: 選択してください
@@ -44,6 +45,7 @@ ja:
     zipcode: 郵便番号
     address: 住所
     bio: 自己紹介
+    avatar: アイコン画像
   views:
     books: 本リスト
     new_book: 新しい本を登録
@@ -63,6 +65,7 @@ ja:
       log_in: ログイン
       logged_in: "%{email} でログイン中"
       logout: ログアウト
+      sign_in_with_github: GitHubでサインイン
       edit_profile: プロフィール編集
       show_profile: プロフィール表示
     follow: フォローする
