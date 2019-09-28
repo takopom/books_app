@@ -35,6 +35,7 @@ en:
     zipcode: Zip code
     address: Address
     bio: Bio
+    avatar: Avatar
   views:
     books: Books
     editing_book: Editing Book
