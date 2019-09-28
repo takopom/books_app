@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  has_many :active_relationships, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
+  has_many :active_relationships, class_name: "Relationship", foreign_key: "user_id", dependent: :destroy
   has_many :following, through: :active_relationships, source: :followed
   has_many :books, dependent: :destroy
   has_one_attached :avatar
