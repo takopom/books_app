@@ -55,7 +55,7 @@ en:
     user:
       sign_up: Sign up
       log_in: Log in
-      logged_in: "Logged in as %{email}"
+      logged_in: "Logged in as %{name}"
       logout: Log out
       sign_in_with_github: Sign in with GitHub
       edit_profile: Edit profile
@@ -63,7 +63,7 @@ en:
     follow: Follow
     unfollow: Unfollow
     show_posts: Show posts from this user
-    posts_title: "Posts by %{email}"
+    posts_title: "Posts by %{name}"
   messages:
     successfully_created: Book was successfully created.
     successfully_updated: Book was successfully updated.

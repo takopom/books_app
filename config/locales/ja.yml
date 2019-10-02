@@ -15,6 +15,7 @@ ja:
         address: 住所
         bio: 自己紹介
         avatar: アイコン画像
+        name: 名前
   helpers:
     select:
       prompt: 選択してください
@@ -46,6 +47,7 @@ ja:
     address: 住所
     bio: 自己紹介
     avatar: アイコン画像
+    name: 名前
   views:
     books: 本リスト
     new_book: 新しい本を登録
@@ -63,7 +65,7 @@ ja:
     user:
       sign_up: サインイン
       log_in: ログイン
-      logged_in: "%{email} でログイン中"
+      logged_in: "%{name} でログイン中"
       logout: ログアウト
       sign_in_with_github: GitHubでサインイン
       edit_profile: プロフィール編集
@@ -71,7 +73,7 @@ ja:
     follow: フォローする
     unfollow: フォロー解除
     show_posts: このユーザの投稿を見る
-    posts_title: "%{email}さんの投稿一覧"
+    posts_title: "%{name}さんの投稿一覧"
   messages:
     successfully_created: 本を登録しました。
     successfully_updated: 本を更新しました。

@@ -9,7 +9,7 @@ class HomesController < ApplicationController
       books = Book.where(user_id: relationship.followed_id)
       @posts.push({
         :user_id => user.id,
-        :email => user.email,
+        :name => user.name,
         :avatar => user.avatar,
         :books => books
       })
