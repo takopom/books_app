@@ -11,7 +11,6 @@ Rails.application.routes.draw do
     resources :users do
       member do
         resources :relationships, only: [:create, :destroy]
-        resources :posts, only: [:index], as: :user_posts
       end
     end
 
