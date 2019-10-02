@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show]
 
   def show
-    @books = Book.where(user_id: params[:id])
   end
 
   private
