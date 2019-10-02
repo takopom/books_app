@@ -64,6 +64,12 @@ en:
     unfollow: Unfollow
     show_posts: Show posts from this user
     posts_title: "Posts by %{name}"
+    profile: Profile
+    home:
+      title: Posts of followers
+      posted_by: Posted by
+    menu:
+      home: Home
   messages:
     successfully_created: Book was successfully created.
     successfully_updated: Book was successfully updated.

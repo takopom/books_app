@@ -74,6 +74,12 @@ ja:
     unfollow: フォロー解除
     show_posts: このユーザの投稿を見る
     posts_title: "%{name}さんの投稿一覧"
+    profile: プロフィール
+    home:
+      title: フォロワーの投稿一覧
+      posted_by: ユーザ名
+    menu:
+      home: ホーム
   messages:
     successfully_created: 本を登録しました。
     successfully_updated: 本を更新しました。
