@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+.comment {
+  width: 50%;
+  margin: 10px 0px 20px 0px;
+  border-bottom: 1px solid lightgray;
+}
+
+.comment_header {
+  display: flex;
+}
+
+.comment_name {
+  margin: 0px 10px 0px 0px;
+  font-weight: bold;
+}
+ 
+.comment_date {
+  margin: 0px 0px 0px 10px;
+  color: gray;
+}
+
+.comment_content {
+
+}
