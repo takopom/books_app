@@ -7,7 +7,9 @@ Rails.application.routes.draw do
     devise_for :users, skip: :omniauth_callbacks, controllers: { registrations: "registrations" }
     resources :books
     resources :users, only: [:show]
-    resources :reports
+    resources :reports do
+      resources :comments, only: [:create]
+    end
     get "/books" => "books#index", as: :user_root
   end
 
