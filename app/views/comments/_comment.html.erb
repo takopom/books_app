@@ -4,7 +4,7 @@
       <%= comment.user.name %>
     </p>
     <p class="comment_date">
-      <%= l(comment.created_at.in_time_zone('Tokyo'), format: :default) %>
+      <%= l(comment.created_at.in_time_zone('Tokyo'), format: :long) %>
     </p>
   </div>
   <p class="comment_content">
