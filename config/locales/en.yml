@@ -39,7 +39,7 @@ en:
     bio: Bio
     avatar: Avatar
   views:
-    books: Books
+    books: All of books
     editing_book: Editing Book
     new_book: New Book
     show: Show
@@ -70,6 +70,8 @@ en:
       posted_by: Posted by
     menu:
       home: Home
+      books: Books
+      profile: Profile
   messages:
     successfully_created: Book was successfully created.
     successfully_updated: Book was successfully updated.

@@ -49,10 +49,10 @@ ja:
     avatar: アイコン画像
     name: 名前
   views:
-    books: 本リスト
+    books: すべての投稿一覧
     new_book: 新しい本を登録
     editing_book: 本を編集
-    show: 閲覧
+    show: 詳細
     edit: 編集
     destroy: 削除
     back: 戻る
@@ -80,6 +80,8 @@ ja:
       posted_by: ユーザ名
     menu:
       home: ホーム
+      books: 本一覧
+      profile: プロフィール
   messages:
     successfully_created: 本を登録しました。
     successfully_updated: 本を更新しました。
