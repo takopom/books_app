@@ -58,9 +58,14 @@ en:
       sign_in_with_github: Sign in with GitHub
       edit_profile: Edit profile
       show_profile: Show profile
+    comments: Comments
+    comment:
+      post: Post comment
   messages:
     successfully_created: Book was successfully created.
     successfully_updated: Book was successfully updated.
     successfully_destroyed: Book was successfully destroyed.
     prohibited_saved: prohibited this book from being saved
     confirm: Are you sure?
+    successfully_commented: Your comment was successfully posted.
+    unsuccessfully_commented: Your comment was failed posted. 

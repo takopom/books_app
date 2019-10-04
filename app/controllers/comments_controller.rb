@@ -1,17 +1,14 @@
 class CommentsController < ApplicationController
   def create
-    report = Report.find(params[:report_id])
-    @comment = Comment.new(comment_params)
-    @comment.commentable_id = report.id
-    @comment.commentable_type = report.class.to_s
+    @comment = @commentable.comments.new(comment_params)
 
     if @comment.save!
-      flash[:notice] = "コメントしました"
+      notice = I18n.t("messages.successfully_commented")
     else
-      flash[:notice] = "コメント投稿に失敗しました"
+      notice = I18n.t("messages.unsuccessfully_commented")
     end
 
-    redirect_back fallback_location: reports_path(params[:report_id])
+    redirect_to @commentable, notice: notice
   end
 
   private

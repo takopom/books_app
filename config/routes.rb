@@ -5,10 +5,12 @@ Rails.application.routes.draw do
 
   scope "(/:locale)", locale: /en|ja/ do
     devise_for :users, skip: :omniauth_callbacks, controllers: { registrations: "registrations" }
-    resources :books
+    resources :books do
+      resources :comments, only: [:create], module: :books
+    end
     resources :users, only: [:show]
     resources :reports do
-      resources :comments, only: [:create]
+      resources :comments, only: [:create], module: :reports
     end
     get "/books" => "books#index", as: :user_root
   end

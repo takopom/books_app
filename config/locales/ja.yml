@@ -75,9 +75,14 @@ ja:
       sign_in_with_github: GitHubでサインイン
       edit_profile: プロフィール編集
       show_profile: プロフィール表示
+    comments: コメント
+    comment:
+      post: コメントする
   messages:
     successfully_created: 本を登録しました。
     successfully_updated: 本を更新しました。
     successfully_destroyed: 本を削除しました。
     prohibited_saved: 本の保存ができませんでした。
     confirm: 本当によろしいですか？
+    successfully_commented: コメントを投稿しました。
+    unsuccessfully_commented: コメントの投稿に失敗しました。 

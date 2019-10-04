@@ -22,15 +22,8 @@
   </p>
 </section>
 
-<section>
-  <h2>コメント</h2>
-
-  <% @comments.each do |comment| %>
-    <%= render 'comments/comment', comment: comment %>
-  <% end %>
-</section>
-
-<%= render 'comments/form', report: @report, comment: @comment %>
+<%= render 'comments/comments', comments: @comments %>
+<%= render 'comments/form', commentable: @report, comment: @comment %>
 
 <%= link_to 'Edit', edit_report_path(@report) %> |
 <%= link_to 'Back', reports_path %>
