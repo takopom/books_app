@@ -1,0 +1,22 @@
+<%= form_with(model: [@commentable, @comment], local: true) do |form| %>
+  <%= form.hidden_field :user_id, value: current_user.id %>
+
+  <div class="comment_header">
+    <p class="comment_name">
+      <%= @comment.user.name %>
+    </p>
+    <p class="comment_date">
+      <%= l(@comment.created_at.in_time_zone("Tokyo"), format: :long) %>
+    </p>
+    <p class="comment_button">
+      <%= form.submit t("views.save"), class: "comment_save_button" %>
+    </p>
+    <p class="comment_button">
+      <%= link_to t("views.back"), @commentable %>
+    </p>
+  </div>
+
+  <div class="field">
+    <%= form.text_area :content, cols: 50, rows: 5 %>
+  </div>
+<% end %>

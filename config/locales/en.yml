@@ -44,6 +44,7 @@ en:
     edit: Edit
     destroy: Destroy
     back: Back
+    save: Save
     pagination:
       first: "&laquo; First"
       last: "Last &raquo;"
@@ -67,5 +68,8 @@ en:
     successfully_destroyed: Book was successfully destroyed.
     prohibited_saved: prohibited this book from being saved
     confirm: Are you sure?
-    successfully_commented: Your comment was successfully posted.
-    unsuccessfully_commented: Your comment was failed posted. 
+    comments:
+      successfully_created: Your comment was successfully posted.
+      successfully_destroyed: Your comment was successfully destroyed.
+      successfully_updated: Your comment was successfully updated.
+      unsuccessfully_created: Your comment was failed posted. 

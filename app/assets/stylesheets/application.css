@@ -17,7 +17,7 @@
 .comment {
   width: 50%;
   margin: 10px 0px 20px 0px;
-  border-bottom: 1px solid lightgray;
+  border-bottom: solid 1px lightgray;
 }
 
 .comment_header {
@@ -30,10 +30,27 @@
 }
  
 .comment_date {
-  margin: 0px 0px 0px 10px;
+  margin: 0px 10px 0px 10px;
+  color: gray;
+}
+
+.comment_button {
+  margin: 0px 5px 0px 5px;
+  border: none;
   color: gray;
 }
 
 .comment_content {
+  background-color: transparent;
+  font-size: 1em;
+  color: dimgrey;
+}
 
+.comment_save_button {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  font-size: 1em;
+  color: dimgrey;
+  padding: 0px;
 }

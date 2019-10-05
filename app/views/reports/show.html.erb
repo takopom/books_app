@@ -13,7 +13,7 @@
 
   <p>
     <strong>User:</strong>
-    <%= @report.user_id %>
+    <%= @report.user.name %>
   </p>
 
   <p>
@@ -22,7 +22,7 @@
   </p>
 </section>
 
-<%= render 'comments/comments', comments: @comments %>
+<%= render 'comments/comments', commentable: @report, comments: @comments %>
 <%= render 'comments/form', commentable: @report, comment: @comment %>
 
 <%= link_to 'Edit', edit_report_path(@report) %> |

@@ -61,6 +61,7 @@ ja:
     edit: 編集
     destroy: 削除
     back: 戻る
+    save: 保存
     pagination:
       first: "&laquo; 最初"
       last: "最後 &raquo;"
@@ -84,5 +85,8 @@ ja:
     successfully_destroyed: 本を削除しました。
     prohibited_saved: 本の保存ができませんでした。
     confirm: 本当によろしいですか？
-    successfully_commented: コメントを投稿しました。
-    unsuccessfully_commented: コメントの投稿に失敗しました。 
+    comments:
+      successfully_created: コメントを投稿しました。
+      successfully_destroyed: コメントを削除しました。
+      successfully_updated: コメントを更新しました。
+      unsuccessfully_created: コメントの投稿に失敗しました。 
