@@ -53,6 +53,11 @@ ja:
     address: 住所
     bio: 自己紹介
     avatar: アイコン画像
+  reports:
+    title: タイトル
+    reported_at: 報告日
+    description: 内容
+    user: 報告者
   views:
     books: 本リスト
     new_book: 新しい本を登録
@@ -79,6 +84,9 @@ ja:
     comments: コメント
     comment:
       post: コメントする
+    reports: 日報
+    new_report: 日報を作成
+    editing_report: 日報を編集
   messages:
     successfully_created: 本を登録しました。
     successfully_updated: 本を更新しました。

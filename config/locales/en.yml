@@ -36,6 +36,11 @@ en:
     address: Address
     bio: Bio
     avatar: Avatar
+  reports:
+    title: Subject
+    reported_at: Reported on
+    description: Description
+    user: Reported by
   views:
     books: Books
     editing_book: Editing Book
@@ -62,6 +67,9 @@ en:
     comments: Comments
     comment:
       post: Post comment
+    reports: Daily reports
+    new_report: New report
+    editing_report: Editing report
   messages:
     successfully_created: Book was successfully created.
     successfully_updated: Book was successfully updated.

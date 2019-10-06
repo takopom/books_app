@@ -1,5 +1,5 @@
 <section>
-  <h1>日報</h1>
+  <h1><%= t("views.reports") %></h1>
 
   <p>
     <strong>Title:</strong>
@@ -25,5 +25,5 @@
 <%= render 'comments/comments', commentable: @report, comments: @comments %>
 <%= render 'comments/form', commentable: @report, comment: @comment %>
 
-<%= link_to 'Edit', edit_report_path(@report) %> |
-<%= link_to 'Back', reports_path %>
+<%= link_to t("views.edit"), edit_report_path(@report) %> |
+<%= link_to t("views.back"), reports_path %>
