@@ -71,13 +71,17 @@ en:
     new_report: New report
     editing_report: Editing report
   messages:
-    successfully_created: Book was successfully created.
-    successfully_updated: Book was successfully updated.
-    successfully_destroyed: Book was successfully destroyed.
-    prohibited_saved: prohibited this book from being saved
     confirm: Are you sure?
+    books:
+      successfully_created: Book was successfully created.
+      successfully_updated: Book was successfully updated.
+      successfully_destroyed: Book was successfully destroyed.
+      prohibited_saved: prohibited this book from being saved
     comments:
       successfully_created: Your comment was successfully posted.
-      successfully_destroyed: Your comment was successfully destroyed.
       successfully_updated: Your comment was successfully updated.
-      unsuccessfully_created: Your comment was failed posted. 
+      successfully_destroyed: Your comment was successfully destroyed.
+    reports:
+      successfully_created: Report was successfully created.
+      successfully_updated: Report was successfully updated.
+      successfully_destroyed: Report was successfully destroyed.

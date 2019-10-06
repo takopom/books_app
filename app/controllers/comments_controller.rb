@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
   before_action :ser_comments, only: [:index, :show]
   before_action :set_comment, only: [:show, :edit, :update, :destroy]

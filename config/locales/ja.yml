@@ -88,13 +88,17 @@ ja:
     new_report: 日報を作成
     editing_report: 日報を編集
   messages:
-    successfully_created: 本を登録しました。
-    successfully_updated: 本を更新しました。
-    successfully_destroyed: 本を削除しました。
-    prohibited_saved: 本の保存ができませんでした。
     confirm: 本当によろしいですか？
+    books:
+      successfully_created: 本を登録しました。
+      successfully_updated: 本を更新しました。
+      successfully_destroyed: 本を削除しました。
+      prohibited_saved: 本の保存ができませんでした。
     comments:
       successfully_created: コメントを投稿しました。
-      successfully_destroyed: コメントを削除しました。
       successfully_updated: コメントを更新しました。
-      unsuccessfully_created: コメントの投稿に失敗しました。 
+      successfully_destroyed: コメントを削除しました。
+    reports:
+      successfully_created: 日報を投稿しました。
+      successfully_updated: 日報を更新しました。
+      successfully_destroyed: 日報を削除しました。
