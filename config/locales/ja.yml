@@ -21,8 +21,7 @@ ja:
         reported_at: 報告日
         description: 内容
       comment:
-        content: コメント内容
-        created_at: 投稿日
+        content: コメント
   helpers:
     select:
       prompt: 選択してください

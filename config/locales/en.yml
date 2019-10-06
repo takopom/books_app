@@ -6,6 +6,8 @@ en:
         memo: Memo
         author: Author
         picture: Picture
+      comment:
+        content: Comment
   helpers:
     select:
       prompt: Please select
