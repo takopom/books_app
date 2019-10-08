@@ -4,8 +4,8 @@
   <thead>
     <tr>
       <th><%= t("reports.title") %></th>
-      <th><%= t("reports.reported_at") %></th>
       <th><%= t("reports.description") %></th>
+      <th><%= t("reports.reported_at") %></th>
       <th><%= t("reports.user") %></th>
       <th colspan="3"></th>
     </tr>
@@ -15,12 +15,16 @@
     <% @reports.each do |report| %>
       <tr>
         <td><%= report.title %></td>
-        <td><%= report.description %></td>
+        <td><p class="reports_description"><%= report.description %></p></td>
         <td><%= report.reported_on %></td>
-        <td><%= report.user_id %></td>
+        <td><%= report.user.name %></td>
         <td><%= link_to t("views.show"), report %></td>
-        <td><%= link_to t("views.edit"), edit_report_path(report) %></td>
-        <td><%= link_to t("views.destroy"), report, method: :delete, data: { confirm: t("messages.confirm") } %></td>
+        <% if report.user.id == current_user.id %>
+          <td><%= link_to t("views.edit"), edit_report_path(report) %></td>
+          <td><%= link_to t("views.destroy"), report, method: :delete, data: { confirm: t("messages.confirm") } %></td>
+        <% else %>
+          <td colspan="2"></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

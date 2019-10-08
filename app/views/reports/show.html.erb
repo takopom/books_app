@@ -25,5 +25,7 @@
 <%= render 'comments/comments', commentable: @report, comments: @comments %>
 <%= render 'comments/form', commentable: @report, comment: @comment %>
 
-<%= link_to t("views.edit"), edit_report_path(@report) %> |
+<% if @report.user.id == current_user.id %>
+  <%= link_to t("views.edit"), edit_report_path(@report) %> |
+<% end %>
 <%= link_to t("views.back"), reports_path %>
