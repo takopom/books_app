@@ -31,28 +31,20 @@ class ReportsController < ApplicationController
     @report = Report.new(report_params)
     @report.user_id = current_user.id
 
-    respond_to do |format|
-      if @report.save
-        format.html { redirect_to @report, notice: I18n.t("messages.reports.successfully_created") }
-        format.json { render :show, status: :created, location: @report }
-      else
-        format.html { render :new }
-        format.json { render json: @report.errors, status: :unprocessable_entity }
-      end
+    if @report.save
+      redirect_to @report, notice: I18n.t("messages.reports.successfully_created")
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /reports/1
   # PATCH/PUT /reports/1.json
   def update
-    respond_to do |format|
-      if @report.update(report_params)
-        format.html { redirect_to @report, notice: I18n.t("messages.reports.successfully_updated") }
-        format.json { render :show, status: :ok, location: @report }
-      else
-        format.html { render :edit }
-        format.json { render json: @report.errors, status: :unprocessable_entity }
-      end
+    if @report.update(report_params)
+      redirect_to @report, notice: I18n.t("messages.reports.successfully_updated")
+    else
+      render :edit
     end
   end
 
@@ -60,10 +52,7 @@ class ReportsController < ApplicationController
   # DELETE /reports/1.json
   def destroy
     @report.destroy
-    respond_to do |format|
-      format.html { redirect_to reports_url, notice: I18n.t("messages.reports.successfully_destroyed") }
-      format.json { head :no_content }
-    end
+    redirect_to reports_url, notice: I18n.t("messages.reports.successfully_destroyed")
   end
 
   private
