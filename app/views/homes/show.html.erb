@@ -12,11 +12,11 @@
   </thead>
 
   <tbody>
-    <% @posts.each do |post| %>
-      <% post[:books].each do |book| %>
+    <% @followings.each do |following| %>
+      <% following.books.each do |book| %>
         <tr>
-          <td><%= image_tag post[:avatar], size: "32x32" if post[:avatar].attached? %></td>
-          <td><%= post[:name] %></td>
+          <td><%= image_tag following.avatar, size: "32x32" if following.avatar.attached? %></td>
+          <td><%= following.name %></td>
           <td><%= book.title %></td>
           <td><%= book.memo %></td>
           <td><%= link_to t("views.show"), book %></td>
