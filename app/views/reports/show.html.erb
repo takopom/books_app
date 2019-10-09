@@ -18,7 +18,9 @@
 
   <p>
     <strong>Description:</strong>
-    <%= @report.description %>
+  </p>
+  <p>
+    <%= markdown(@report.description) %>
   </p>
 </section>
 
