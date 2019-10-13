@@ -1,0 +1,33 @@
+<section>
+  <h1><%= t("views.menu.reports") %></h1>
+
+  <p>
+    <strong>Title:</strong>
+    <%= @report.title %>
+  </p>
+
+  <p>
+    <strong>Reported on:</strong>
+    <%= @report.reported_on %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= @report.user.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+  </p>
+  <p>
+    <%= markdown(@report.description) %>
+  </p>
+</section>
+
+<%= render 'comments/comments', commentable: @report, comments: @comments %>
+<%= render 'comments/form', commentable: @report, comment: @comment %>
+
+<% if @report.user.id == current_user.id %>
+  <%= link_to t("views.edit"), edit_report_path(@report) %> |
+<% end %>
+<%= link_to t("views.back"), reports_path %>

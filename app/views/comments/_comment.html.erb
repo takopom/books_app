@@ -1,0 +1,19 @@
+<div class="comment" id="comment_<%= comment.id %>">
+  <div class="comment_header">
+    <p class="comment_name">
+      <%= comment.user.name %>
+    </p>
+    <p class="comment_date">
+      <%= l(comment.created_at.in_time_zone("Tokyo"), format: :long) %>
+    </p>
+    <% if comment.user.id == current_user.id %>
+      <p class="comment_button">
+        <%= link_to t("views.edit"), [:edit, commentable, comment], remote: true %>
+      </p>
+      <p class="comment_button">
+        <%= link_to t("views.destroy"), [commentable, comment], method: :delete %>
+      </p>
+    <% end %>
+  </div>
+  <pre class="comment_content"><%= comment.content %></pre>
+</div>

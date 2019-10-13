@@ -7,6 +7,8 @@ en:
         author: Author
         picture: Picture
         user_id: Posted by
+      comment:
+        content: Comment
   helpers:
     select:
       prompt: Please select
@@ -38,14 +40,21 @@ en:
     address: Address
     bio: Bio
     avatar: Avatar
+  reports:
+    title: Subject
+    reported_at: Reported on
+    description: Description
+    user: Reported by
   views:
-    books: All of books
-    editing_book: Editing Book
-    new_book: New Book
     show: Show
     edit: Edit
     destroy: Destroy
     back: Back
+    save: Save
+    new_book: New Book
+    editing_book: Editing Book
+    new_report: New report
+    editing_report: Editing report
     pagination:
       first: "&laquo; First"
       last: "Last &raquo;"
@@ -60,11 +69,11 @@ en:
       sign_in_with_github: Sign in with GitHub
       edit_profile: Edit profile
       show_profile: Show profile
-    follow: Follow
-    unfollow: Unfollow
-    show_posts: Show posts from this user
-    posts_title: "Posts by %{name}"
-    profile: Profile
+    comment:
+      post: Post comment
+    relationship:
+      follow: Follow
+      unfollow: Unfollow
     home:
       title: Posts of followers
       posted_by: Posted by
@@ -72,9 +81,20 @@ en:
       home: Home
       books: Books
       profile: Profile
+      reports: Daily reports
+      comments: Comments
   messages:
-    successfully_created: Book was successfully created.
-    successfully_updated: Book was successfully updated.
-    successfully_destroyed: Book was successfully destroyed.
-    prohibited_saved: prohibited this book from being saved
     confirm: Are you sure?
+    books:
+      successfully_created: Book was successfully created.
+      successfully_updated: Book was successfully updated.
+      successfully_destroyed: Book was successfully destroyed.
+      prohibited_saved: prohibited this book from being saved
+    comments:
+      successfully_created: Your comment was successfully posted.
+      successfully_updated: Your comment was successfully updated.
+      successfully_destroyed: Your comment was successfully destroyed.
+    reports:
+      successfully_created: Report was successfully created.
+      successfully_updated: Report was successfully updated.
+      successfully_destroyed: Report was successfully destroyed.

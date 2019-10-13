@@ -5,6 +5,8 @@ class User < ApplicationRecord
   has_many :following, through: :active_relationships, source: :followed
   has_many :books, dependent: :destroy
   has_one_attached :avatar
+  has_many :reports, dependent: :destroy
+  has_many :comments
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

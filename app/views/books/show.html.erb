@@ -1,22 +1,24 @@
-<p>
-  <strong><%= t("books.title") %>:</strong>
-  <%= @book.title %>
-</p>
+<section>
+  <h1><%= @book.title %></h1>
 
-<p>
-  <strong><%= t("books.memo") %>:</strong>
-  <%= @book.memo %>
-</p>
+  <p>
+    <strong><%= t("books.memo") %>:</strong>
+    <%= @book.memo %>
+  </p>
 
-<p>
-  <strong><%= t("books.author") %>:</strong>
-  <%= @book.author %>
-</p>
+  <p>
+    <strong><%= t("books.author") %>:</strong>
+    <%= @book.author %>
+  </p>
 
-<p>
-  <strong><%= t("books.picture") %>:</strong>
-  <%= image_tag(@book.picture_url) if @book.picture.present? %>
-</p>
+  <p>
+    <strong><%= t("books.picture") %>:</strong>
+    <%= image_tag(@book.picture_url) if @book.picture.present? %>
+  </p>
+</section>
+
+<%= render 'comments/comments', commentable: @book, comments: @comments %>
+<%= render 'comments/form', commentable: @book, comment: @comment %>
 
 <p>
   <strong><%= t("books.user_id") %>:</strong>

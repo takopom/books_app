@@ -1,6 +1,6 @@
 <%= form_with(model: @user, url: relationships_path, method: :post, local: true) do |form| %>
   <%= hidden_field_tag :followed_id, @user.id %>
   <div class="actions">
-    <%= form.submit t("views.follow") %>
+    <%= form.submit t("views.relationship.follow") %>
   </div>
 <% end %>

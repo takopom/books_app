@@ -1,0 +1,7 @@
+<section>
+  <h2><%= t("views.menu.comments") %></h2>
+
+  <% comments.each do |comment| %>
+    <%= render 'comments/comment', commentable: commentable, comment: comment %>
+  <% end %>
+</section>

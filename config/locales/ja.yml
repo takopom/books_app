@@ -3,6 +3,8 @@ ja:
     models:
       book: 本
       user: ユーザ
+      report: 日報
+      comment: コメント
     attributes:
       book:
         title: タイトル
@@ -16,6 +18,12 @@ ja:
         bio: 自己紹介
         avatar: アイコン画像
         name: 名前
+      report:
+        title: タイトル
+        reported_at: 報告日
+        description: 内容
+      comment:
+        content: コメント
   helpers:
     select:
       prompt: 選択してください
@@ -47,15 +55,22 @@ ja:
     address: 住所
     bio: 自己紹介
     avatar: アイコン画像
+  reports:
+    title: タイトル
+    reported_at: 報告日
+    description: 内容
+    user: 報告者
     name: 名前
   views:
-    books: すべての投稿一覧
-    new_book: 新しい本を登録
-    editing_book: 本を編集
     show: 詳細
     edit: 編集
     destroy: 削除
     back: 戻る
+    save: 保存
+    new_book: 新しい本を登録
+    editing_book: 本を編集
+    new_report: 日報を作成
+    editing_report: 日報を編集
     pagination:
       first: "&laquo; 最初"
       last: "最後 &raquo;"
@@ -70,11 +85,11 @@ ja:
       sign_in_with_github: GitHubでサインイン
       edit_profile: プロフィール編集
       show_profile: プロフィール表示
-    follow: フォローする
-    unfollow: フォロー解除
-    show_posts: このユーザの投稿を見る
-    posts_title: "%{name}さんの投稿一覧"
-    profile: プロフィール
+    comment:
+      post: コメントする
+    relationship:
+      follow: フォローする
+      unfollow: フォロー解除
     home:
       title: フォロワーの投稿一覧
       posted_by: ユーザ名
@@ -82,9 +97,20 @@ ja:
       home: ホーム
       books: 本一覧
       profile: プロフィール
+      reports: 日報
+      comments: コメント
   messages:
-    successfully_created: 本を登録しました。
-    successfully_updated: 本を更新しました。
-    successfully_destroyed: 本を削除しました。
-    prohibited_saved: 本の保存ができませんでした。
     confirm: 本当によろしいですか？
+    books:
+      successfully_created: 本を登録しました。
+      successfully_updated: 本を更新しました。
+      successfully_destroyed: 本を削除しました。
+      prohibited_saved: 本の保存ができませんでした。
+    comments:
+      successfully_created: コメントを投稿しました。
+      successfully_updated: コメントを更新しました。
+      successfully_destroyed: コメントを削除しました。
+    reports:
+      successfully_created: 日報を投稿しました。
+      successfully_updated: 日報を更新しました。
+      successfully_destroyed: 日報を削除しました。
