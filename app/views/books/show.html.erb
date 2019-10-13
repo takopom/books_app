@@ -20,5 +20,13 @@
 <%= render 'comments/comments', commentable: @book, comments: @comments %>
 <%= render 'comments/form', commentable: @book, comment: @comment %>
 
-<%= link_to t("views.edit"), edit_book_path(@book) %> |
+<p>
+  <strong><%= t("books.user_id") %>:</strong>
+  <%= link_to @user.name, user_path(@user) %>
+</p>
+
+<% if current_user == @user %>
+  <%= link_to t("views.edit"), edit_book_path(@book) %> |
+<% end %>
+
 <%= link_to t("views.back"), books_path %>

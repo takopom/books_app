@@ -1,0 +1,27 @@
+<h1><%= t("views.menu.home") %></h1>
+<p><%= t("views.home.title") %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="2"><%= t("views.home.posted_by") %></th>
+      <th><%= t("books.title") %></th>
+      <th><%= t("books.memo") %></th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @followings.each do |following| %>
+      <% following.books.each do |book| %>
+        <tr>
+          <td><%= image_tag following.avatar, size: "32x32" if following.avatar.attached? %></td>
+          <td><%= following.name %></td>
+          <td><%= book.title %></td>
+          <td><%= book.memo %></td>
+          <td><%= link_to t("views.show"), book %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

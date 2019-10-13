@@ -1,4 +1,4 @@
-<h1><%= t("views.books") %></h1>
+<h1><%= t("views.menu.books") %></h1>
 
 <table>
   <thead>
@@ -17,10 +17,8 @@
         <td><%= book.title %></td>
         <td><%= book.memo %></td>
         <td><%= book.author %></td>
-        <td><%= book.picture %></td>
+        <td><%= image_tag book.picture_url, size: "64x64" if book.picture.present? %></td>
         <td><%= link_to t("views.show"), book %></td>
-        <td><%= link_to t("views.edit"), edit_book_path(book) %></td>
-        <td><%= link_to t("views.destroy"), book, method: :delete, data: { confirm: t("messages.confirm") } %></td>
       </tr>
     <% end %>
   </tbody>

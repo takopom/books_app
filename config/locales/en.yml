@@ -6,6 +6,7 @@ en:
         memo: Memo
         author: Author
         picture: Picture
+        user_id: Posted by
       comment:
         content: Comment
   helpers:
@@ -32,6 +33,7 @@ en:
     memo: Memo
     author: Author
     picture: Picture
+    user_id: Posted by
   users:
     email: E-mail address
     zipcode: Zip code
@@ -44,14 +46,15 @@ en:
     description: Description
     user: Reported by
   views:
-    books: Books
-    editing_book: Editing Book
-    new_book: New Book
     show: Show
     edit: Edit
     destroy: Destroy
     back: Back
     save: Save
+    new_book: New Book
+    editing_book: Editing Book
+    new_report: New report
+    editing_report: Editing report
     pagination:
       first: "&laquo; First"
       last: "Last &raquo;"
@@ -61,17 +64,25 @@ en:
     user:
       sign_up: Sign up
       log_in: Log in
-      logged_in: "Logged in as %{email}"
+      logged_in: "Logged in as %{name}"
       logout: Log out
       sign_in_with_github: Sign in with GitHub
       edit_profile: Edit profile
       show_profile: Show profile
-    comments: Comments
     comment:
       post: Post comment
-    reports: Daily reports
-    new_report: New report
-    editing_report: Editing report
+    relationship:
+      follow: Follow
+      unfollow: Unfollow
+    home:
+      title: Posts of followers
+      posted_by: Posted by
+    menu:
+      home: Home
+      books: Books
+      profile: Profile
+      reports: Daily reports
+      comments: Comments
   messages:
     confirm: Are you sure?
     books:

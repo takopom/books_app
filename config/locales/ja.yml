@@ -11,11 +11,13 @@ ja:
         memo: メモ
         author: 著者
         picture: 画像
+        user_id: 投稿者
       user:
         zipcode: 郵便番号
         address: 住所
         bio: 自己紹介
         avatar: アイコン画像
+        name: 名前
       report:
         title: タイトル
         reported_at: 報告日
@@ -46,6 +48,7 @@ ja:
     memo: メモ
     author: 著者
     picture: 画像
+    user_id: 投稿者
   users:
     email: メールアドレス
     zipcode: 郵便番号
@@ -57,15 +60,17 @@ ja:
     reported_at: 報告日
     description: 内容
     user: 報告者
+    name: 名前
   views:
-    books: 本リスト
-    new_book: 新しい本を登録
-    editing_book: 本を編集
-    show: 閲覧
+    show: 詳細
     edit: 編集
     destroy: 削除
     back: 戻る
     save: 保存
+    new_book: 新しい本を登録
+    editing_book: 本を編集
+    new_report: 日報を作成
+    editing_report: 日報を編集
     pagination:
       first: "&laquo; 最初"
       last: "最後 &raquo;"
@@ -75,17 +80,25 @@ ja:
     user:
       sign_up: サインイン
       log_in: ログイン
-      logged_in: "%{email} でログイン中"
+      logged_in: "%{name} でログイン中"
       logout: ログアウト
       sign_in_with_github: GitHubでサインイン
       edit_profile: プロフィール編集
       show_profile: プロフィール表示
-    comments: コメント
     comment:
       post: コメントする
-    reports: 日報
-    new_report: 日報を作成
-    editing_report: 日報を編集
+    relationship:
+      follow: フォローする
+      unfollow: フォロー解除
+    home:
+      title: フォロワーの投稿一覧
+      posted_by: ユーザ名
+    menu:
+      home: ホーム
+      books: 本一覧
+      profile: プロフィール
+      reports: 日報
+      comments: コメント
   messages:
     confirm: 本当によろしいですか？
     books:
