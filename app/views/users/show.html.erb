@@ -1,3 +1,10 @@
+<h1><%= t("views.profile") %></h1>
+
+<p>
+  <strong><%= t("users.name") %></strong>
+  <%= @user.name %>
+</p>
+
 <p>
   <strong><%= t("users.email") %></strong>
   <%= @user.email %>
@@ -20,11 +27,14 @@
 </p>
 
 <p>
-  <strong><%= t("users.avatar") %></strong>
-  <br>
+  <strong><%= t("users.avatar") %></strong><br>
   <% avatar = @user.avatar.attached? ? @user.avatar : "default.png" %>
   <%= image_tag avatar, size: "100x100" %>
-  </p>
+</p>
+
+<%= render "follow_form" %>
+
+<br>
 
 <%= link_to t("views.edit"), edit_user_registration_path %> |
 <%= link_to t("views.back"), books_path %>

@@ -6,6 +6,7 @@ en:
         memo: Memo
         author: Author
         picture: Picture
+        user_id: Posted by
   helpers:
     select:
       prompt: Please select
@@ -30,6 +31,7 @@ en:
     memo: Memo
     author: Author
     picture: Picture
+    user_id: Posted by
   users:
     email: E-mail address
     zipcode: Zip code
@@ -37,7 +39,7 @@ en:
     bio: Bio
     avatar: Avatar
   views:
-    books: Books
+    books: All of books
     editing_book: Editing Book
     new_book: New Book
     show: Show
@@ -53,11 +55,23 @@ en:
     user:
       sign_up: Sign up
       log_in: Log in
-      logged_in: "Logged in as %{email}"
+      logged_in: "Logged in as %{name}"
       logout: Log out
       sign_in_with_github: Sign in with GitHub
       edit_profile: Edit profile
       show_profile: Show profile
+    follow: Follow
+    unfollow: Unfollow
+    show_posts: Show posts from this user
+    posts_title: "Posts by %{name}"
+    profile: Profile
+    home:
+      title: Posts of followers
+      posted_by: Posted by
+    menu:
+      home: Home
+      books: Books
+      profile: Profile
   messages:
     successfully_created: Book was successfully created.
     successfully_updated: Book was successfully updated.

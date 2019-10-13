@@ -9,11 +9,13 @@ ja:
         memo: メモ
         author: 著者
         picture: 画像
+        user_id: 投稿者
       user:
         zipcode: 郵便番号
         address: 住所
         bio: 自己紹介
         avatar: アイコン画像
+        name: 名前
   helpers:
     select:
       prompt: 選択してください
@@ -38,17 +40,19 @@ ja:
     memo: メモ
     author: 著者
     picture: 画像
+    user_id: 投稿者
   users:
     email: メールアドレス
     zipcode: 郵便番号
     address: 住所
     bio: 自己紹介
     avatar: アイコン画像
+    name: 名前
   views:
-    books: 本リスト
+    books: すべての投稿一覧
     new_book: 新しい本を登録
     editing_book: 本を編集
-    show: 閲覧
+    show: 詳細
     edit: 編集
     destroy: 削除
     back: 戻る
@@ -61,11 +65,23 @@ ja:
     user:
       sign_up: サインイン
       log_in: ログイン
-      logged_in: "%{email} でログイン中"
+      logged_in: "%{name} でログイン中"
       logout: ログアウト
       sign_in_with_github: GitHubでサインイン
       edit_profile: プロフィール編集
       show_profile: プロフィール表示
+    follow: フォローする
+    unfollow: フォロー解除
+    show_posts: このユーザの投稿を見る
+    posts_title: "%{name}さんの投稿一覧"
+    profile: プロフィール
+    home:
+      title: フォロワーの投稿一覧
+      posted_by: ユーザ名
+    menu:
+      home: ホーム
+      books: 本一覧
+      profile: プロフィール
   messages:
     successfully_created: 本を登録しました。
     successfully_updated: 本を更新しました。
