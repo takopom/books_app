@@ -1,7 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: テスト駆動開発
-  memo: TDDについて学習しています。
-  author: Kent Beck
   user_id: 1
+  followed_id: 2
