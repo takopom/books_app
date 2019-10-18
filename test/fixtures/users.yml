@@ -4,9 +4,23 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: 
+taro:
   email: sample@example.com
   zipcode: 1234567
   address: 東京都
   bio: こんにちは
   name: たろう
+
+hanako:
+  email: sample2@example.com
+  zipcode: 1112222
+  address: 大阪府
+  bio: 初めまして
+  name: 花子
+
+yamada:
+  email: sample3@example.com
+  zipcode: 0009999
+  address: 北海道
+  bio: よろしくお願いします
+  name: 山田

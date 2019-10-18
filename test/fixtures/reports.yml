@@ -1,7 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: 日報のタイトル
-  description: 日報の内容
+report_taro:
+  title: 日報1
+  description: 日報の内容1
+  reported_on: 2019-10-01
+  user: taro
+
+report_hanako:
+  title: 日報2
+  description: 日報の内容2
+  reported_on: 2019-10-02
+  user: hanako
+
+report_yamada:
+  title: 日報3
+  description: 日報の内容3
   reported_on: 2019-10-03
-  user_id: 1
+  user: yamada
