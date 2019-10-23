@@ -3,11 +3,14 @@
 require "application_system_test_case"
 
 class BooksTest < ApplicationSystemTestCase
+  include Devise::Test::IntegrationHelpers
+
   setup do
-    @book = books(:one)
+    login_as users(:yamada)
+    @book = books(:futago)
   end
 
-  test "visiting the index" do
+  test "show books" do
     visit books_url
     assert_selector "h1", text: "Books"
   end
@@ -21,27 +24,49 @@ class BooksTest < ApplicationSystemTestCase
     click_on "Create Book"
 
     assert_text "Book was successfully created"
-    click_on "Back"
   end
 
   test "updating a Book" do
     visit books_url
-    click_on "Edit", match: :first
+    click_on "Show", match: :first
+
+    within("div.menu") do
+      click_on "Edit"
+    end
 
     fill_in "Memo", with: @book.memo
     fill_in "Title", with: @book.title
+    fill_in "Author", with: @book.author
     click_on "Update Book"
 
     assert_text "Book was successfully updated"
-    click_on "Back"
   end
 
   test "destroying a Book" do
     visit books_url
-    page.accept_confirm do
-      click_on "Destroy", match: :first
+    click_on "Show", match: :first
+
+    within("div.menu") do
+      click_on "Edit"
     end
 
+    click_on "Destroy", match: :first
+    page.accept_confirm "Are you sure"
+
     assert_text "Book was successfully destroyed"
+  end
+
+  test "commenting to a Book" do
+    visit books_url
+    click_on "Show", match: :first
+
+    within("div.comment") do
+      click_on "Edit"
+    end
+
+    fill_in "Comment", with: "本にコメントをします"
+    click_on "Post comment"
+
+    assert_text "Your comment was successfully posted"
   end
 end

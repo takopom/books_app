@@ -25,8 +25,9 @@
   <%= link_to @user.name, user_path(@user) %>
 </p>
 
-<% if current_user == @user %>
+<div class="menu">
+  <% if current_user == @user %>
   <%= link_to t("views.edit"), edit_book_path(@book) %> |
-<% end %>
-
-<%= link_to t("views.back"), books_path %>
+  <% end %>
+  <%= link_to t("views.back"), books_path %>
+</div>
