@@ -1,31 +1,31 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+comment_tdd:
   content: コメントします。
   user: taro
   commentable: tdd (Book)
 
-two:
+comment_momotaro:
   content: 桃太郎にコメントします。
   user: hanako
   commentable: momotaro (Book)
 
-three:
+comment_futago:
   content: 双子の星にコメントします。
   user: yamada
   commentable: futago (Book)
 
-four:
+comment_report_taro:
   content: 日報1にコメントします。
   user: hanako
   commentable: report_taro (Report)
 
-five:
+comment_report_hanako:
   content: 日報2にコメントします。
   user: yamada
   commentable: report_hanako (Report)
 
-six:
+comment_report_yamada:
   content: 日報3にコメントします。
   user: taro
   commentable: report_yamada (Report)

@@ -55,18 +55,4 @@ class BooksTest < ApplicationSystemTestCase
 
     assert_text "Book was successfully destroyed"
   end
-
-  test "commenting to a Book" do
-    visit books_url
-    click_on "Show", match: :first
-
-    within("div.comment") do
-      click_on "Edit"
-    end
-
-    fill_in "Comment", with: "本にコメントをします"
-    click_on "Post comment"
-
-    assert_text "Your comment was successfully posted"
-  end
 end
