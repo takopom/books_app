@@ -7,13 +7,13 @@ class CommentsTest < ApplicationSystemTestCase
 
   setup do
     sign_in users(:taro)
+    @book = books(:tdd)
   end
 
   test "本のコメントを表示する" do
-    book = books(:tdd)
     comment = comments(:comment_tdd)
 
-    visit book_url("en", book.id)
+    visit book_url("en", @book)
 
     within "div.comment" do
       assert_equal comment.user.name, find("p.comment_name").text
@@ -34,8 +34,7 @@ class CommentsTest < ApplicationSystemTestCase
   end
 
   test "本にコメントを投稿する" do
-    book = books(:tdd)
-    visit book_url("en", book.id)
+    visit book_url("en", @book)
 
     fill_in "comment[content]", with: "コメントを投稿します"
     click_on "Post comment"
@@ -44,8 +43,7 @@ class CommentsTest < ApplicationSystemTestCase
   end
 
   test "本のコメントを編集する" do
-    book = books(:tdd)
-    visit book_url("en", book)
+    visit book_url("en", @book)
 
     within "div.comment" do
       click_on "Edit"
@@ -57,8 +55,7 @@ class CommentsTest < ApplicationSystemTestCase
   end
 
   test "本のコメントを削除する" do
-    book = books(:tdd)
-    visit book_url("en", book)
+    visit book_url("en", @book)
 
     within "div.comment" do
       click_on "Destroy"

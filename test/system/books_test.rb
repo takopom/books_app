@@ -6,16 +6,16 @@ class BooksTest < ApplicationSystemTestCase
   include Devise::Test::IntegrationHelpers
 
   setup do
-    login_as users(:yamada)
+    sign_in users(:yamada)
     @book = books(:futago)
   end
 
-  test "show books" do
+  test "本一覧を表示する" do
     visit books_url
     assert_selector "h1", text: "Books"
   end
 
-  test "creating a Book" do
+  test "本を投稿する" do
     visit books_url
     click_on "New Book"
 
@@ -26,7 +26,7 @@ class BooksTest < ApplicationSystemTestCase
     assert_text "Book was successfully created"
   end
 
-  test "updating a Book" do
+  test "本を更新する" do
     visit books_url
     click_on "Show", match: :first
 
@@ -42,7 +42,7 @@ class BooksTest < ApplicationSystemTestCase
     assert_text "Book was successfully updated"
   end
 
-  test "destroying a Book" do
+  test "本を削除する" do
     visit books_url
     click_on "Show", match: :first
 
