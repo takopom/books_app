@@ -3,10 +3,6 @@
 require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
-  # test "from omniauth" do
-  #   assert false
-  # end
-
   setup do
     @hanako = users(:hanako)
   end
