@@ -1,9 +1,20 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  memo: MyText
+tdd:
+  title: テスト駆動開発
+  memo: TDDについて学習しています。
+  author: Kent Beck
+  user: taro
 
-two:
-  title: MyString
-  memo: MyText
+momotaro:
+  title: 桃太郎
+  memo: 桃から生まれた桃太郎は、老婆老爺に養われ、鬼ヶ島へ鬼退治に出征、道中遭遇するイヌ、サル、キジをきび団子を褒美に家来とし、鬼の財宝を持ち帰り、郷里に凱旋する。
+  author: 不明
+  user: hanako
+
+futago:
+  title: 双子の星
+  memo: チュンセ童子とポウセ童子
+  author: 宮沢賢治
+  user: yamada
+

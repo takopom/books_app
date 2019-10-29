@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+taro_hanako:
+  user: taro
+  followed: hanako
+
+taro_yamada:
+  user: taro
+  followed: yamada
+
+hanako_taro:
+  user: hanako
+  followed: taro
+
+yamada_hanako:
+  user: yamada
+  followed: hanako
