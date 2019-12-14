@@ -46,6 +46,10 @@ gem "omniauth-github"
 gem "dotenv-rails"
 gem "rails-i18n"
 gem "redcarpet"
+gem "ed25519"
+gem "bcrypt_pbkdf"
+gem "capistrano-rails", require: false
+gem "capistrano-rbenv"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
