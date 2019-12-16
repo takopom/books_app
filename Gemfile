@@ -50,6 +50,7 @@ gem "ed25519"
 gem "bcrypt_pbkdf"
 gem "capistrano-rails", require: false
 gem "capistrano-rbenv"
+gem "capistrano3-puma"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
