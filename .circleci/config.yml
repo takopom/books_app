@@ -8,6 +8,13 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/ruby:2.6.2-node-browsers
+        environment: # プライマリコンテナの環境変数
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          PGHOST: 127.0.0.1
+          PGUSER: circleci-demo-ruby
+          RAILS_ENV: test
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
