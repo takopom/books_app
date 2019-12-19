@@ -57,10 +57,10 @@ workflows:
   version: 2
   books_app_deploy:
     jobs:
-      - test
-      - deploy:
-          requires:
-            - test
+      - test:
           filters:
             branches:
               only: master
+      - deploy:
+          requires:
+            - test
