@@ -93,6 +93,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  config.omniauth :github, Rails.application.credentials.github[:key], Rails.application.credentials.github[:secret], scope: "user,repo"
 end
