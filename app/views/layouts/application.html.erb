@@ -13,7 +13,7 @@
     <p class="navbar-text pull-right">
       <% if user_signed_in? %>
         <%= image_tag current_user.avatar, size: "48x48" if current_user.avatar.attached? %>
-        <b><%= t("views.user.logged_in", name: current_user.name) %></b>
+        <%= t("views.user.logged_in", name: current_user.name) %>
         <%= link_to t("views.menu.home"), home_path %> | 
         <%= link_to t("views.menu.books"), books_path %> | 
         <%= link_to t("views.menu.reports"), reports_path, class: "navbar-link" %> |
