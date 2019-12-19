@@ -8,13 +8,9 @@ executors:
       BUNDLE_PATH: vendor/bundle
     working_directory: ~/repo
 
-jobs:
-  build:
-    executor: books_app_executor
-    environment:
-      RAILS_ENV: test
+commands:
+  bundle_install:
     steps:
-      - checkout
       - run:
           name: Bundler install
           command: gem install bundler
@@ -27,6 +23,15 @@ jobs:
           paths:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+
+jobs:
+  build:
+    executor: books_app_executor
+    environment:
+      RAILS_ENV: test
+    steps:
+      - checkout
+      - bundle_install
       - run:
           name: Database setup
           command: bundle exec rake db:create db:migrate
@@ -39,6 +44,11 @@ jobs:
   deploy:
     executor: books_app_executor
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "22:7c:45:f1:6c:34:b0:fa:93:0b:1a:ea:38:29:e6:c1"
+      - checkout
+      - bundle_install
       - run:
           name: Capistrano deploy
           command: bundle exec cap production deploy
