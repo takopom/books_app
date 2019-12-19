@@ -1,67 +1,43 @@
-# Ruby CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-ruby/ for more details
-#
-version: 2
-jobs:
-  build:
+version: 2.1
+
+executors:
+  books_app_executor:
     docker:
-      # specify the version you desire here
       - image: circleci/ruby:2.6.2-node-browsers
-        environment: # プライマリコンテナの環境変数
-          BUNDLE_JOBS: 3
-          BUNDLE_RETRY: 3
-          BUNDLE_PATH: vendor/bundle
-          PGHOST: 127.0.0.1
-          PGUSER: circleci-demo-ruby
-          RAILS_ENV: test
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
-
+    environment:
+      BUNDLE_PATH: vendor/bundle
+      RAILS_ENV: test
     working_directory: ~/repo
 
+jobs:
+  build:
+    executor: books_app_executor
     steps:
       - checkout
-
-      # Download and cache dependencies
+      - run:
+          name: Bundler install
+          command: gem install bundler
       - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "Gemfile.lock" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
       - run:
-          name: bundler install
-          command: |
-            gem install bundler
-            
-      - run:
-          name: install dependencies
-          command: |
-            bundle install --jobs=4 --retry=3 --path vendor/bundle
-
+          name: Install dependencies
+          command: bundle install
       - save_cache:
           paths:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-
-      # Database setup
-      - run: bundle exec rake db:create RAILS_ENV=test
-      - run: bundle exec rake db:migrate RAILS_ENV=test
-
-      # run tests!
+      - run:
+          name: Database setup
+          command: bundle exec rake db:create db:migrate
       - run: 
-          name: run tests
+          name: Run tests
           command: bundle exec rake test
-          when: always
-
-      # collect reports
       - store_test_results:
           path: test/reports
-      - store_artifacts:
-          path: /tmp/test-results
-          destination: test-results
-          
+
+workflows:
+  version: 2
+  books_app_build:
+    jobs:
+      - build
+
