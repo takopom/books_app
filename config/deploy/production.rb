@@ -6,6 +6,5 @@ server "153.127.17.56",
   user: "deploy",
   roles: %w{web app db},
   ssh_options: {
-    keys: %w(~/.ssh/sakura_deploy_rsa),
     port: 22222
   }
