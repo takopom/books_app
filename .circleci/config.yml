@@ -25,7 +25,7 @@ commands:
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
 
 jobs:
-  test:
+  minitest:
     executor: books_app_executor
     environment:
       RAILS_ENV: test
@@ -55,12 +55,12 @@ jobs:
 
 workflows:
   version: 2
-  books_app_deploy:
+  minitest_and_deploy:
     jobs:
-      - test:
+      - minitest
+      - deploy:
+          requires:
+            - minitest
           filters:
             branches:
               only: master
-      - deploy:
-          requires:
-            - test
